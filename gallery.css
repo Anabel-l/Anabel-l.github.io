@@ -90,11 +90,9 @@ ul{
     cursor: pointer;
 }
 
-#carousel figure:nth-child(1) {transform: rotateY(100deg) scale(-1, 1) translateZ(500px);}
-#carousel figure:nth-child(2) { transform: rotateY(140deg) scale(-1, 1) translateZ(500px);}
-#carousel figure:nth-child(3) { transform: rotateY(180deg) scale(-1, 1) translateZ(500px);}
-#carousel figure:nth-child(4) { transform: rotateY(220deg) scale(-1, 1) translateZ(500px);}
-#carousel figure:nth-child(5) { transform: rotateY(260deg) scale(-1, 1) translateZ(500px);}
+#carousel figure:nth-child(1) { transform: rotateY(140deg) scale(-1, 1) translateZ(500px);}
+#carousel figure:nth-child(2) { transform: rotateY(180deg) scale(-1, 1) translateZ(500px);}
+#carousel figure:nth-child(3) { transform: rotateY(220deg) scale(-1, 1) translateZ(500px);}
 
 @keyframes rotation{
 	from{
@@ -135,6 +133,7 @@ a:link, a:visited {
 }
 
 a.title {
+	position: relative;
 	font-size: 20px;
     font-weight: lighter;
     color:white;
@@ -145,6 +144,7 @@ a.title {
 }
 
 a.title:link{
+	position: relative;
 	color: white;
 	font-size:30px;
 	text-align: center;
@@ -226,4 +226,8 @@ a:hover{
 	transform: scale(0.5, -0.5) translate(-100px, -100px);
 	filter:brightness(100);
 	z-index:10;
+}
+
+.polaroid{
+	width:80%;
 }
