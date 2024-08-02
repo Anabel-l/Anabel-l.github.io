@@ -3,7 +3,7 @@
    "how to change link color." */
 
 /* import google fonts here, also TODO: figure out single line comments*/
-@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100&family=Lancelot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100&family=Lancelot&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .bg {
     background-repeat: no-repeat;
@@ -14,14 +14,53 @@
     background-size: cover;
 	filter:hue-rotate(180deg);
 }
+
 h1{
-    font-size: 110px;
+    font-size: 60px;
     color:white;
     z-index:10;
     position: relative;
     text-align: center;
 	display: table;
-	margin: 5% auto 0;
+	margin: 10%;
 	text-transform: uppercase;
 	font-family: 'Lancelot', serif;
+    font-weight:100;
+}
+
+h2 {
+	font-family: 'Lancelot', serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+p {
+	font-family: 'Thasadith', sans-serif;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+    outline-color: white;
+	outline-style:solid;
+	outline-width: 1px;
+    display: flex;
+    margin:1%;
+    padding:3%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    color:white;
+}
+
+.col1{
+    justify-content: center;
+    flex: 30%;
+}
+
+.col2{
+    flex: 70%;
+    justify-content: left;
 }

@@ -16,7 +16,6 @@ body {
   font-weight: 100;
 }
 
-
 .container {
   position: relative;
   text-align: center;
@@ -45,7 +44,6 @@ body {
   transform: scale(-0.5, -0.5) translate(-100px, -100px);
   z-index:10;
 }
-
 
 .centered1 {
   position: absolute;
