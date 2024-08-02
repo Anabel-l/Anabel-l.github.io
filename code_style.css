@@ -23,12 +23,15 @@ h1{
     text-align: center;
 	display: table;
 	margin: 10%;
+    padding: 15px 0;
 	text-transform: uppercase;
 	font-family: 'Lancelot', serif;
     font-weight:100;
 }
 
-h2 {
+.h2 {
+    color: white;
+	font-size:30px;
 	font-family: 'Lancelot', serif;
     font-style: italic;
     font-weight: 100;
@@ -36,6 +39,51 @@ h2 {
 
 p {
 	font-family: 'Thasadith', sans-serif;
+}
+
+ul {
+    font-family: 'Thasadith', sans-serif;
+    margin:-3%;
+}
+
+a.b:link, a.b:visited {
+	color: white;
+	font-size:30px;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+	outline-color: white;
+	outline-style:solid;
+	outline-width: 1px;
+	z-index: 10;
+    margin: 2% 0% 4% 0%;
+}
+
+@keyframes zoom_button {
+	from {padding:10px;
+		padding-left: 20px;
+		padding-right: 20px;}
+	to {padding:15px;
+		padding-left: 25px;
+		padding-right: 25px;}
+  }
+
+a:hover{
+	
+	animation-name: zoom_button;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+	color: white;
+	font-size:30px;
+	text-align: center;
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0.2);
+	outline-color: white;
+	outline-style:solid;
+	outline-width: 1px;
 }
 
 .row {
@@ -48,11 +96,11 @@ p {
 	outline-style:solid;
 	outline-width: 1px;
     display: flex;
-    margin:1%;
-    padding:3%;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 8px;
     color:white;
+    margin:1%;
+    padding:3%;
 }
 
 .col1{
