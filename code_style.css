@@ -22,7 +22,6 @@ h1{
     position: relative;
     text-align: center;
 	display: table;
-	margin: 10%;
     padding: 15px 0;
 	text-transform: uppercase;
 	font-family: 'Lancelot', serif;
@@ -45,6 +44,7 @@ ul {
     font-family: 'Thasadith', sans-serif;
     margin:-3%;
 }
+
 
 a.b:link, a.b:visited {
 	color: white;
@@ -105,10 +105,10 @@ a:hover{
 
 .col1{
     justify-content: center;
-    flex: 30%;
+    flex: 40%;
 }
 
 .col2{
-    flex: 70%;
+    flex: 60%;
     justify-content: left;
 }
