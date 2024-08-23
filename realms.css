@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100&family=Lancelot&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Lancelot", serif;
+  font-weight: 100;
+}
+
+h1{
+    font-size: 110px;
+    color:white;
+    z-index:10;
+    position: relative;
+    text-align: center;
+	display: table;
+	margin: 5% auto 0;
+	text-transform: uppercase;
+	font-family: 'Lancelot', serif;
+}
+
+.corner {
+    position: absolute;
+	bottom: 120px;
+	right: -100px;
+    transform: scale(-0.5, 0.5) translate(-100px, -100px);
+    filter:brightness(100);
+    z-index:-10;
+  }
+  
+.botcorner {
+    position: absolute;
+    bottom: -250px;
+	right: -100px;
+    transform: scale(-0.5, -0.5) translate(-100px, -100px);
+    filter:brightness(100);
+    z-index:-10;
+}
+
+.corner3 {
+	position: absolute;
+	bottom: -250px;
+	left: -100px;
+	transform: scale(0.5, -0.5) translate(-100px, -100px);
+	filter:brightness(100);
+	z-index:-10;
+}
+  
+.corner4 {
+	position: absolute;
+	bottom: 120px;
+	left: -100px;
+	transform: scale(0.5, 0.5) translate(-100px, -100px);
+	filter:brightness(100);
+	z-index:-10;
+}
+
+.scrollbox {
+    background-color: #000000;
+    border: 2px solid #F3E2AC;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar Styles */
+.scrollbox::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scrollbox::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.scrollbox::-webkit-scrollbar-thumb {
+    background: #F3E2AC;
+}
+
+.scrollbox::-webkit-scrollbar-thumb:hover {
+    background: #F3E2AC;
+}
+
+/* For Firefox */
+.scrollbox {
+    scrollbar-width: thin;
+    scrollbar-color: #F3E2AC #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+    .scrollbox {
+        height: 150px;
+    }
+}
+
+.container {
+    padding: 0 10% 0 10%;
+}
+
+
+a:link, a:visited {
+    color: white;
+    font-size:30px;
+    text-align: center;
+    text-decoration: none;
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  
+a:hover{
+    animation-name: zoom_button;
+    animation-duration: 500ms;
+    font-style:underline;
+    animation-fill-mode: forwards;
+    color: rgb(200, 230, 255);
+    font-size:30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+a.b:link, a.b:visited, a.b:hover {
+    font-size:20px;
+    font-style: italic;
+    margin-left: -20px;
+    padding-right: 60px;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #000000;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Thasadith', sans-serif;
+}
+  
+/* Style the buttons inside the tab */
+.tab button {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    font-family: 'Thasadith', sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 12px;
+    margin:4px;
+    color: black;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    font-family: inherit;
+    font-weight:800px;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    color: white;
+    border: none;
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+  
+.column {
+    outline-color: rgba(255, 255, 255);
+    outline-style:solid;
+    outline-width: 1px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color:white;
+    margin:1%;
+    padding:3%;
+}
+  
+  .col1{
+      justify-content: left;
+      flex: 40%;
+  }
+  
+  .col2{
+      flex: 60%;
+      justify-content: left;
+  }
+
+  .bg {
+    background-repeat: no-repeat;
+    background-image: url('webbstars.jpg');
+	background-blend-mode:multiply;
+	background-color: rgb(129, 129, 129);
+    background-attachment: fixed;
+    background-size: cover;
+	filter:hue-rotate(180deg);
+}
+
+h1{
+    font-size: 60px;
+    color:white;
+    z-index:10;
+    position: relative;
+    text-align: center;
+	display: table;
+    padding:15px;
+    text-transform: uppercase;
+	font-family: 'Lancelot', serif;
+    font-weight:100;
+}
+
+h2 {
+    color: white;
+	font-size:30px;
+	font-family: 'Lancelot', serif;
+    font-style: italic;
+    font-weight: 100;
+}
+
+p {
+	font-family: 'Thasadith', sans-serif;
+}
+
+ul {
+    font-family: 'Thasadith', sans-serif;
+    margin:-2%;
+}
+
+.headshot {
+	filter:hue-rotate(-180deg);
+    width:220px;
+    padding:10px;
+}
+
+.centered {
+    justify-content: center;
+}
+
+.awards {
+    margin:-10px 0 10px 0;
+}

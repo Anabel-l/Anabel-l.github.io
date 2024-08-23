@@ -7,34 +7,455 @@
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <link href="/gallery.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/realms.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body class="bg">
+  <body class="bg" onload="openTab(event, 'About')">
     <img class="corner" src="/corner.png" alt = "graphic">
     <img class="botcorner" src="/corner.png" alt = "graphic">
     <img class="corner3" src="/corner.png" alt = "graphic">
     <img class="corner4" src="/corner.png" alt = "graphic">
-    <h1>REALMS</h1>
+    <h1 id="top">REALMS</h1>
     <div class="container">
-      <div id="carousel">
-        <figure><h2>Writing</h2></figure>
-        
-        <figure>
-            <a href="coding.html" class="title">Programming</a>
-            <p>Projects include:
-              <ul>
-                <li>Movie Ratings Multiclass Sentiment Predictor (Support Vector Machine)</li>
-                <li>Author Prediction Recurrent Neural Net</li>
-                <li>Synthetic Language Generator</li>
-                <li>Hypercube Robotics Autonomous Motion</li>
-              </ul>
-            </p>
-        </figure>
-        
-        <figure><h2>Art</h2></figure>
+      <div class="tab">
+        <button class="tablinks" onclick="window.location.href='index.html';">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+        <button class="tablinks" onclick="openTab(event, 'Programming')">Programming</button>
+        <button class="tablinks" onclick="openTab(event, 'Writing')">Writing</button>
+        <button class="tablinks" onclick="openTab(event, 'Art')">Art</button>
+      </div>
+      <div class="scrollbox">
+        <div id="About" class="tabcontent">
+          <container class="row" style="margin: 20px 0">
+              <div>
+                <img class="headshot column" src="/headshot.jpg" alt = "picture of Salem">
+              </div>
+              <div class = "column" style="margin:-50px 40px;">
+                <container>
+                  <h2>Salem Loucks (they/them)</h2>
+                  <div>
+                    <p>
+                    Salem is a computer scientist with expertise in data analysis, robotics, and machine learning. With research experience in space weather and musical motion-capture robotics they are focused on interdisciplinary applications of programming. They are an extremely motivated and collaborative worker with leadership experience, interest in increasing inclusivity and excellent communication skills. National Merit Scholarship Finalist.
+                    <br><br>
+                    But they are more than that too. Salem is an artist, poet, naturalist, and adventurer. Nothing excites them more than a good challenge and a good team. They are joining the ranks of young people trying to transform and study the world.
+                    </p>
+                  </div>
+                  <br><br>
+                  <a href="" class="b">Downloadable Resume</a>
+                  <a href="" class="b">Linkedin</a>
+                  <a href="" class="b">GitHub</a>
+                  <a href="" class="b">Contact</a>
+                </container>
+              </div>
+            </container>
+        </div>
+        <div id="Programming" class="tabcontent">
+          <div class="row">
+            <div class="column col1 centered">
+                <h1>Featured Projects</h1>
+            </div>
+            <div class="column col2">
+                <container>
+                <a href="album_cover_discover.html" class="h2" target="_blank">Album Cover Discover</a>
+                <p>
+                    <i>Language:</i> Python <br>
+                    <i>Time: </i> 2024 <br><br>
+                    <ul>
+                        <li>Discover new songs based on the aesthetics! Judge a book by its cover... and discover a song with a similar album cover.</li>
+                        <li>Scraped album cover image using Spotify API and encoded images with CNN to extract features</li>
+                        <li>Crafted K-means clustering, used PCA and TSNE to train a KNN to recommend new albums based on an input album cover</li>
+                        <a href="album_cover_discover.html" style="font-size: 15px; padding:20px 0;"> >>>> Try it out </a>
+                    </ul>
+                </p>
+                </container>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="column col2">
+              <container>
+              <a href="https://github.com/star-skelly/ML-Language-Generator/tree/main" class="h2" target="_blank">Synthetic Language Generator </a>
+              <p>
+                  <i>Language:</i> Java, Python <br>
+                  <i>Time: </i> 2019 - 2024 <br><br>
+                  <ul>
+                      <li>Created a fully synthetic language generator in Java, with randomly generated but consistent phonemes and morphology per each generated language</li>
+                      <li>Translated project to Python, with machine learning to translate words without hard-coding conjugations</li>
+                  </ul> 
+              </p>
+              </container>
+          </div>
+
+          <div class="column col1">
+              <container>
+              <a href="https://github.com/star-skelly/AppleMusic-to-Spotify-Converter" class="h2" target="_blank">Apple to Spotify Playlist Converter</a>
+              <p>
+                  <i>Language:</i> Python<br>
+                  <i>Time: </i> 2024 <br><br>
+                  <ul>
+                      <li>Created a tool that scrapes the list of songs from an Apple playlist, creates a Spotify playlist and adds the songs to it with the highest similarity to the original song list.</li>
+                      <li>Forked from a non-functional converter.</li>
+                      <li>Used Requests, string similarity, and Spotipy to bring this beauty to life.</li>
+                  </ul>
+              </p>
+              </container>
+          </div>
+          
+      </div>
+
+
+        <div class="row">
+            <div class="column col2">
+                <container>
+                <a href="https://colab.research.google.com/drive/1pOXa-u2RexVZT6YcVZYy8whgY0PNU8L4?usp=sharing" class = "h2" target="_blank">Author Prediction Recurrent Neural Network (RNN) </a>
+                <p>
+                    <i>Language:</i> Python <br>
+                    <i>Time: </i> 2023 - 2024 <br><br>
+                    <ul>
+                        <li>Coded an Recurrent Neural Network in Python, trained with word bigrams to model the writing styles of certain authors and label books with predicted author</li>
+                    </ul>
+                </p>
+                </container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column col1">
+                <container>
+                <a href="https://youtu.be/ZXlYoW0oAZ8?si=2rqwXjc_SoTc_x3u" class="h2" target="_blank">Hypercube Robotics</a>
+                <p>
+                    <i>Language:</i> Java <br>
+                    <i>Time: </i> 2017 - 2022 <br><br>
+                    <ul>
+                        <li>Programmed autonomous movements, crafted calculus-based algorithms, PID motion control, multithreading, odometry systems, computer vision, and state-machines</li>
+                        <li>Co-founded and represented the FTC team to the robotics community, ranked as high as 4th globally</li>
+                        <li>Managed the brand standards and graphic design for the team, selling apparel, volunteering to teach robotics to underprivileged schools, and raising over $12,000 in grants, sponsorships, and fundraisers</li>
+                    </ul>
+                </p>
+                </container>
+            </div>
+
+            <div class="column col2">
+                <container>
+                <a href="https://github.com/star-skelly/Enable" class="h2" target="_blank">Enable @OmniHacks Hackathon</a>
+                <p>
+                    <i>Language:</i> Android Studio, Swyft & HTML <br>
+                    <i>Time: </i> 2022 <br><br>
+                    <ul>
+                        <li>Developed an app & website in 24 hours for schedule organization, meditation, and sleep planning</li>
+                        <li>Showcasing my adaptability, I created both an Arduino and iPhone app -- learning Swyft with no prior knowledge</li>
+                    </ul>
+                </container>
+            </div>
+        </div>
+        </div>
+        <div id="Art" class="tabcontent">
+        </div>
+        <div id="Writing" class="tabcontent">
+          <div class = "row column">
+            <h2 style="margin:-15px; text-transform: capitalize;"><i>Awards</i></h2>
+          </div>
+          <div class="row">
+            <div class = "column col2">
+              <container>
+                <h2 class = "awards">Poetry Awards</h2>
+                <ul>
+                  <li>Caldwell Written Award, 1st place --- for <i>the Blue Glass Poetry Collection</i></li>
+                  <li>Caldwell Performance Award, 4th place --- for <i>broken window glass</i></li>
+                  <li>Hopwood Weisberg Award, 2nd Place --- for <i>Oh Dear Life</i></li>
+                  <li>Roger M Jones Honorable Mention --- for <i>the Memories of a Fallen God Poetry Collection</i></li>
+                  <li>Advancing Climate Education Art, 3rd place --- for <i>The Cycle of Fumes</i></li>
+                  <li>Science As Art, Honorable Mention --- for <i>Against One</i></li>
+                </ul>
+              </container>
+            </div>
+            <div class = "column col1">
+              <container>
+                <h2 class = "awards">Fiction Awards</h2>
+                <p>Cooley Fiction Writing Award, 2nd Place --- for <i>The Gnarled Branches of the Deacon Family Tree</i></p>
+              </container>
+            </div>
+          </div>
+          
+          <div class = "row column">
+            <h2 style="margin:-15px; text-transform: capitalize;"><i>Selected Fiction</i></h2>
+          </div>
+
+
+          <div class="row">
+            <div class = "column col1">
+              <container>
+                <h2 class = "awards">Gnarled Branches of the Deacon Family Tree</h2>
+                <p>This story explores a wandering poet's childhood and relationship with her brother. 
+                From street fights to druidic fire, trucking to train hopping, it is a story of strange magics.<br><br>
+                I began writing this as the backstory to my graphic novel, set in an urban fantasy California. 
+                But the richness of the family history and of sibling's love soon spilled out into a story much farther reaching than I expected.
+                It's a story for the unheard kids, dropouts, loners, and weirdos. And who was I, if not one of those loners? <br><br>
+                I'm still working on this story but it holds a really special place in my heart.
+              </p>
+              </container>
+            </div>
+            <div class = "column col2">
+              <container>
+                <h2 class = "awards">The Winged Creatures</h2>
+                <p>My biggest project right now, this story is deeply character driven. 
+                  It centers around the goth band <i>The Winged Creatures</i> in NYC throughout the decades.
+                  The drummer is Tango/Luna, a nihilist vampire who steals memories and is looking to be worshipped.
+                  The singer & guitarist is Bristol, a deeply unserious punk kid who has a bad habit of slipping through time and space.
+                  Lastly, the bassist is Flower-Hands, a creature grown from the woods and the trinkets of love that humans left behind.
+                  To say they look at life differently would be the understatement of the century.
+                  <br><br>
+                  They each search to scrape their own life, ideas of god and love in each other and in the city of their music.
+                  I want this story to also be a tribute to cities in general, the vast masses of humanity that gather in clubs and concerts,
+                  mingling and living life in a thousand different ways.
+                  This story is shaping up to be a full novel, hopefully finished in a couple of years.
+                </p>
+              </container>
+            </div>
+          </div>
+
+
+          <div class = "row column">
+            <h2 style="margin:-15px; text-transform: capitalize;"><i>Selected Poems</i></h2>
+          </div>
+          <div class="row">
+            <div class = "column col1">
+              <container>
+                <h2 class = "awards">Oh Dear Life</h2>
+                <p>poem here</p>
+              </container>
+            </div>
+            <div class = "column col2">
+              <container>
+                <h2 class = "awards">Sanctuary</h2>
+                <p>The leaves slither through the dusting of mist,<br>
+                  whisper of rain until the sky gives in.<br>
+                  Hold tight, hold warm<br>
+                  in the rusting greens.<br><br>
+                  
+                  Their gentle symphony murmurs<br>
+                  that this is safer <br>
+                  than any four walls will ever be.<br>
+                  No matter how bright,<br>
+                  covered in murals and memories,<br>
+                  those walls will never hold you<br>
+                  like these kind elders will.<br><br>
+                  
+                  They tilt their heads up in clouds tall,<br>
+                  rock you gently to the lullaby of fall.<br>
+                  Next to them you are but a living dirt speck,<br>
+                  the smallest centipede<br>
+                  buried in rotting leaves.<br><br>
+                  
+                  Mycelium expands.<br>
+                  Tiny creature, you <br>
+                  are held in equal esteem.<br>
+                  </p>
+              </container>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class = "column col2">
+              <container>
+                <h2 class = "awards">The Cycle of Fumes</h2>
+                <p>I split my hand along the line of blood<br>
+                  dripping from your oil fire<br>
+                  Yours I say<br>
+                  as if it is not the oil of<br>
+                  <i>my</i> bubbling charring skin<br>
+                  <i>my</i> black trash bags
+                  <i>my</i> fossils, melted to blurry photographs<br>
+                  <br>
+                  I crave the ocean I say<br>
+                  Crave the calm of continuous crash<br>
+                  the sand sinking into my nose and tongue<br>
+                  until it washes away all excrements of artificiality<br>
+                  strips away rags of clothing<br>
+                  below the constant tide<br>
+                  <br>
+                  Can you tell I've been reading about the challenge of human bodies?<br>
+                  It's all a satire to survive<br>
+                  Satire to pretend we are not all<br>
+                  drowning in the fumes<br>
+                  <br>
+                  fumes of hallucinogenic hospital beds<br>
+                  that calcify into the grass, the stones<br>
+                  that circle circle<br>
+                  <br>
+                  tainted by microplastics in my<br>
+                  ocean you dunk the speaker<br>
+                  & blast away the oil spill<br>
+                  the turtles in six-packs in fishermen's nets<br>
+                  to hear the boom & bass & wipe the salt<br>
+                  out of red-eyed raccoon eyes & septum sniffle<br>
+                  out of the dysfunction.<br>
+                  <br>
+                  This is the dysfunct.<br>
+                  The de facto defunct you wonder what it means<br>
+                  to be circular as you see your tail eat your head<br>
+                  And your cat sleeps in the dog bed and your dog tries so very hard<br>
+                  to contort her bones to sleep into cat beds.<br>
+                  <br>
+                  Okay.<br>
+                  One page left.<br>
+                  Can you read any less?<br>
+                  Anarchy holds a certain wish<br>
+                  for Trees & Trees & Trees in your<br>
+                  SMS texts & radio towers<br>
+                  & the CIA wades through the endless<br>
+                  to-do lists & the endless<br>
+                  cardboard signs<br>
+                  proffered at book-holding<br>
+                  addicts watching stop signs instead.<br>
+                  <br>
+                  Okay one page left.<br>
+                  Are you with me here?<br>
+                  It's narrative now, data now, structure now.<br>
+                  The signatures are bleeding out in paper binding into the<br>
+                  burning hijabs doxed on the rubble floor next to<br>
+                  the white-mangled open heart,<br>
+                  surgically stripped of color<br>
+                  into meditative grayscale-<br>
+                  _____________and back<br>
+                  _______to the boxcars<br>
+                  __to the lumbering beasts<br>
+                  through the fields of wheat<br>
+                  in their hunks of meat and machine<br>
+                  all under the great sky<br>
+                  of the global imaginary.<br>
+                  <br>
+                  Okay there's one space left for us to get it right!<br>
+                  The hopeful marching - coffee houses!<br>
+                  into concerts!<br>
+                  into rushing the field!<br>
+                  the fall of currency!<br>
+                  from the illusion of consciousness!<br>
+                  <br>
+                  One scrap left-<br>
+                  So tell me, do you see me<br>
+                  (do you see a human)<br>
+                  in these CVS receipts and origami cranes?<br>
+                  <br>
+                  Here.<br>
+                  One moment left here.<br>
+                  <br>
+                  Listen, it's<br>
+                  diagnosis: lobotomy<br>
+                  prescription: fiction restriction addiction<br>
+                  I on the I of the Ion<br>
+                  Turning the excitement of the smallest unit<br>
+                  out and away from the<br>
+                  blinding sun.<br>
+                  <br>
+                  I sit, yes I, I and not<br>
+                  not you here.<br>
+                  I I I sit on the tidy-mess<br>
+                  and grab little wooden blocks<br>
+                  of words together.<br>
+                  <br>
+                  Their Legos<br>
+                  build into<br>
+                  some<br>
+                  something. Just some<br>
+                  something.<br>
+                  <br>
+                  And for the moment,<br>
+                  that's enough.<br>
+                  <br>
+                  Enough to turn to the sun<br>
+                  turn to the ocean<br>
+                  the fumes,<br>
+                  the pretend,<br>
+                  <br>
+                  and raise your hand<br>
+                  from the blood.</p>
+              </container>
+            </div>
+            <div class = "column col1">
+              <container>
+                <h2 class = "awards">broken window glass</h2>
+                <p>broken window glass under my boot treads<br>
+                  leather black against tinted glass green<br>
+                  i think this break-in<br>
+                  stole the snow<br><br>
+
+                  they litter their sidewalks with cracked ink<br>
+                  evidence of crime<br>
+                  'gainst nature and time<br>
+                  they hate it (the cold the snow)<br>
+                  tell me to break<br>
+                  my windows smash<br>
+                  my mirrors<br>
+                  toss the shards to sidewalk cures<br><br>
+
+                  glasses down i don't wanna break the ice<br>
+                  lips spread teeth out in the white<br>
+                  incisors bite down<br>
+                  can't you see i'm smiling bright?<br>
+                  don't take my clothes at their black worth<br>
+                  i'm enjoying all this sight<br>
+                  throwing keys against the ice i'd rather<br>
+                  lick the falling rice<br>
+                  than smash my face in a clear glass<br>
+                  window<br><br>
+
+                  detritus of the burglary<br>
+                  crunching shards against the heel<br>
+                  of feet they'd cut in summertime<br><br>
+
+                  maybe in a minute a month<br>
+                  i'll break the frosted windows crack<br>
+                  my blue glasses and<br>
+                  scream and shatter and throw it all<br>
+                  to the sidewalks show it all<br>
+                  my magnificent theft of winter<br>
+                  thought<br>
+                  the breakin and breakout will be all<br>
+                  that is left<br><br>
+
+                  maybe in a second a semester<br>
+                  i'll sit in my room and sprinkle broken glass<br>
+                  on my toast and tea<br>
+                  and cuddle the dead heaters heart at last<br><br>
+
+                  but somehow i think<br>
+                  i'd rather the joyride<br>
+                  to the breakin<br>
+                  i'd prefer the snow<br>
+                  to the salt<br>
+                  the impulse flow<br>
+                  to the controlled stall<br><br>
+
+                  so keep your broken glass to<br>
+                  yourself your burgled cars<br>
+                  to your own health<br>
+                  i'll walk in the white<br><br>
+
+                  i like the bite</p>
+              </container>
+            </div>
+          </div>
+          
+          
+          
+        </div>
       </div>
     </div>
-      <a href="index.html" class="b">Back</a>
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+        document.getElementById("top").innerHTML = tabName;
+      }
+      </script>
 
   </body>
 </html>
